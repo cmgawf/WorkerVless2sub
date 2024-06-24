@@ -5,26 +5,26 @@ let mytoken= ['auto'];//快速订阅访问入口, 留空则不启动快速订阅
 
 // 设置优选地址，不带端口号默认443，TLS订阅生成
 let addresses = [
-	// 'icook.tw:2053#官方优选域名',
-	// 'cloudflare.cfgo.cc#优选官方线路',
+	'icook.tw:2053#官方优选域名',
+	'cloudflare.cfgo.cc#优选官方线路',
 ];
 
 // 设置优选地址api接口
 let addressesapi = [
-	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt', //可参考内容格式 自行搭建。
+	'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt', //可参考内容格式 自行搭建。
 	//'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesipv6api.txt', //IPv6优选内容格式 自行搭建。
 ];
 
 // 设置优选地址，不带端口号默认80，noTLS订阅生成
 let addressesnotls = [
-	//'www.visa.com.sg#官方优选域名',
-	//'www.wto.org:8080#官方优选域名',
-	//'www.who.int:8880#官方优选域名',
+	'www.visa.com.sg#官方优选域名',
+	'www.wto.org:8080#官方优选域名',
+	'www.who.int:8880#官方优选域名',
 ];
 
 // 设置优选noTLS地址api接口
 let addressesnotlsapi = [
-	//'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt', //可参考内容格式 自行搭建。
+	'https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt', //可参考内容格式 自行搭建。
 ];
 
 let DLS = 8;//速度下限
@@ -39,8 +39,8 @@ let link = '';
 let edgetunnel = 'ed';
 let RproxyIP = 'false';
 let proxyIPs = [//无法匹配到节点名就随机分配以下ProxyIP域名
-	// 'proxyip.multacom.fxxk.dedyn.io',
-	// 'proxyip.vultr.fxxk.dedyn.io',
+	'proxyip.multacom.fxxk.dedyn.io',
+	'proxyip.vultr.fxxk.dedyn.io',
 ];
 let CMproxyIPs = [
 	//'proxyip.aliyun.fxxk.dedyn.io:HK',//匹配节点名, 有HK就分配该ProxyIP域名
@@ -435,9 +435,9 @@ export default {
 				},
 			});
 		} else if ( (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter')) ) && !userAgent.includes('nekobox') && !userAgent.includes('cf-workers-sub')) {
-			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&rename=%60HKG%7CHK%40%E9%A6%99%E6%B8%AF%60%60TW%40%E5%8F%B0%E6%B9%BE%60%60SIN%7CSG%40%E6%96%B0%E5%8A%A0%E5%9D%A1%60%60SJC%7CUS%40%E7%BE%8E%E5%9B%BD%60%60ICN%7CKR%40%E9%9F%A9%E5%9B%BD%60%60JP%40%E6%97%A5%E6%9C%AC%60&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=true&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 		} else if ( (userAgent.includes('sing-box') || userAgent.includes('singbox') || (format === 'singbox' && !userAgent.includes('subconverter')) ) && !userAgent.includes('cf-workers-sub')){
-			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&rename=%60HKG%7CHK%40%E9%A6%99%E6%B8%AF%60%60TW%40%E5%8F%B0%E6%B9%BE%60%60SIN%7CSG%40%E6%96%B0%E5%8A%A0%E5%9D%A1%60%60SJC%7CUS%40%E7%BE%8E%E5%9B%BD%60%60ICN%7CKR%40%E9%9F%A9%E5%9B%BD%60%60JP%40%E6%97%A5%E6%9C%AC%60&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=true&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 		} else {
 			if(host.includes('workers.dev') || host.includes('pages.dev')) {
 				if (proxyhostsURL) {
