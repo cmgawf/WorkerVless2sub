@@ -435,9 +435,9 @@ export default {
 				},
 			});
 		} else if ( (userAgent.includes('clash') || (format === 'clash' && !userAgent.includes('subconverter')) ) && !userAgent.includes('nekobox') && !userAgent.includes('cf-workers-sub')) {
-			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=clash&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&rename=%60HKG%7CHK%40%E9%A6%99%E6%B8%AF%60%60TW%40%E5%8F%B0%E6%B9%BE%60%60SIN%7CSG%40%E6%96%B0%E5%8A%A0%E5%9D%A1%60%60SJC%7CUS%40%E7%BE%8E%E5%9B%BD%60%60ICN%7CKR%40%E9%9F%A9%E5%9B%BD%60%60JP%40%E6%97%A5%E6%9C%AC%60&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=true&new_name=true`;
 		} else if ( (userAgent.includes('sing-box') || userAgent.includes('singbox') || (format === 'singbox' && !userAgent.includes('subconverter')) ) && !userAgent.includes('cf-workers-sub')){
-			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+			subconverterUrl = `https://${subconverter}/sub?target=singbox&url=${encodeURIComponent(subconverterUrl)}&insert=false&config=${encodeURIComponent(subconfig)}&rename=%60HKG%7CHK%40%E9%A6%99%E6%B8%AF%60%60TW%40%E5%8F%B0%E6%B9%BE%60%60SIN%7CSG%40%E6%96%B0%E5%8A%A0%E5%9D%A1%60%60SJC%7CUS%40%E7%BE%8E%E5%9B%BD%60%60ICN%7CKR%40%E9%9F%A9%E5%9B%BD%60%60JP%40%E6%97%A5%E6%9C%AC%60&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=true&new_name=true`;
 		} else {
 			if(host.includes('workers.dev') || host.includes('pages.dev')) {
 				if (proxyhostsURL) {
